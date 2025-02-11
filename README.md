@@ -1,30 +1,20 @@
-### **Ejercicio 8: Persona y Estudiante**
+### **Ejercicio 9: Sistema de Gestión Académica**
 
- Clases y Objetos Básicos:
+ Descripción: Crea una jerarquía de clases para representar distintos roles en un entorno académico, como estudiantes y profesores.
 
-  1. Crea una clase Persona que tenga dos propiedades: nombre y edad. Luego, en el main crea un objeto de esta clase e imprime sus propiedades.
+ Clases a implementar:
 
- Métodos Simples:
+  Clase Base Persona
 
-  2. Añade un método cumple a la clase Persona que incremente la edad de la persona en uno cada vez que se llama.
-  3. Sobreescribe el método toString() y prográmalo para que se muestre una persona con todas sus propiedades. Por ejemplo "Persona (nombre = Lucía, edad = 21)".
-  4. En el main ejecuta el cumple de la persona y muestra su información de dos formas: accediendo a sus propiedades y mediante el método toString() (recuerda que no es necesario llamar al método toString(), sino que se invocará automáticamente cuando necesite realizar la conversión del contenido a String).
+  1. Propiedades comunes: nombre (String), edad (Int), id (String).
+  2. Método mostrarRol(), que imprime el rol de la persona (Estudiante, Profesor, etc.).
 
- Encapsulamiento:
+  Clase Derivada Estudiante
 
-  5. Modifica la clase Persona para que reciba la fecha de nacimiento por el constructor, y se almacene en una propiedad privada. Modificar la edad para que no se pueda modificar, pero se pueda consultar su valor, calculándolo con respecto a la fecha de nacimiento.
+  3. Propiedades específicas: curso (String), calificacionPromedio (Double).
+  4. Implementa el método mostrarRol() y añade un método mostrarCalificacion() para imprimir la calificación promedio.
 
- Herencia:
+  Clase Derivada Profesor
 
-  6. Crea una clase Estudiante que herede de Persona y añade una propiedad carrera. Las propiedades deben incluir el modificador open (vuelve a dejar la propiedad edad pública).
-  7. Realiza de nuevo un override de toString() para completar la información de Estudiante (intenta usar el resultado del método de la clase padre y completarlo).
-
- Polimorfismo:
-
-  8. Añade un método actividad() a la clase Persona que imprima "Lucía está realizando una actividad." y sobreescribe en Estudiante para que muestre un mensaje específico para estudiantes.
-  9. Crea en el main a una persona y un estudiante y muestra la actividad que realizan.
-
- Clases y Objetos con Validación:
-
-  10. Modifica la clase Persona para que no acepte nombres vacíos y edades negativas. Utiliza un constructor primario con valores por defecto para edad.
-  11. Prueba a crear un estudiante con una edad negativa, controlando las excepciones y mostrando el mensaje de error específico.
+  5. Propiedades específicas: departamento (String), aniosExperiencia (Int).
+  6. Implementa el método mostrarRol() y añade un método mostrarExperiencia() para imprimir los años de experiencia.
